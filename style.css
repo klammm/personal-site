@@ -1,0 +1,90 @@
+/*DON'T PUT SEMI-COLONS IN CSS*/
+
+
+#welcome-mat {
+  font-size: 58px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.title {
+  font-family: 'Nunito Sans'; sans-serif;
+}
+
+#overwatch-pic {
+    image-orientation: from-image;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.banner {
+  height: 100px;
+  display: block;
+  position: relative;
+  padding-top: 20px;
+  background-color: orange;
+}
+
+.header-quote {
+  height: 165px;
+  display: block;
+  position: relative;
+  padding-bottom: 20px;
+  background-color: orange;
+  margin: auto;
+  overflow: hidden;
+}
+
+.horizontal-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.horizontal-li {
+  display: inline;
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: orange;
+}
+
+.wrapper {
+  width: 600px;
+  margin: auto;
+}
+
+.navbar {
+  float: left;
+  position: fixed;
+}
+
+.vertical-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+.vertical-li {
+  display: block;
+  font-size: 20px;
+  float: left;
+  padding: 8px 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
