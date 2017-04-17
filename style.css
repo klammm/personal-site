@@ -1,5 +1,13 @@
 /*DON'T PUT SEMI-COLONS IN CSS*/
 
+html, body {
+  height: 100%;
+}
+
+#blog {
+  border-right: 1px solid black;
+  height: 100%;
+}
 
 #welcome-mat {
   font-size: 58px;
