@@ -1,6 +1,6 @@
 # My first attempt at building a Node.js application
 
-~- 4/18/2017 -~ Kevin Lam
+ 4/18/2017 -- Kevin Lam
 
 Hello there, my friend.
 
