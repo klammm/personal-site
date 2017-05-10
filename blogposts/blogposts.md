@@ -29,7 +29,7 @@ Now to install our dependencies:
 
 - `npm install -g swagger knex`
 
-- `swagger project create INSERT_NAME`
+- `swagger project create INSERT_NAME` (Use the arrow keys and choose `Express` with the enter key)
 
 ### #1: Plan, map out, and finalize your data architecture.
 
@@ -39,7 +39,7 @@ Please. Please. Please for the love of all that is good in this world. Please ha
 
 ### #2: Create the database and start the server
 
-- Declare the [migration schemas](https://en.wikipedia.org/wiki/Schema_migration), create the seeds, and create the server
+- Declare the [migration schemas](https://en.wikipedia.org/wiki/Schema_migration), create the seeds, and test the server
 
 First off, our migrations use a `knexfile.js` that specifies various configuration settings.
 
@@ -106,10 +106,55 @@ Run the following command in the terminal:
 
 `knex seed:run`
 
+Great! We have our seeds now along with our migrations. No one ever congratulated me at this point, but let's give a round of applause for creating our first(perhaps my third or fourth, but still a reason to celebrate) database with successful migrations and seeds.
+
+To start the swagger project, run the following command in the terminal:
+
+`swagger project start` (Make sure we're in the project directory)
+
+To make sure your server is running correctly, you should see something like this:
+
+![Swagger Project Start](/images/swagger_start.png)
+
+We can run either command to test our first route that Swagger provides for us.
+
+In a browser: `httpL://localhost:10010/hello?name=INSERT_NAME`
+
+__OR__
+
+In the terminal: `curl http://127.0.0.1:10010/hello?name=INSERT_NAME`
+
+Now, I'm hoping you've been using your own name already or some sort of generic name whenever I've been writing `INSERT_NAME` or `TABLE_NAME`. If not, then worry not. You'll just have strange database and table names. I won't judge.
+
 ### #3: Configure the Swagger.yaml
 
+- Create our first GET route
+
+Now that we have our server running. We can either use Swagger's own provided editor or configure the `swagger.yaml` ourselves.
+
+##### To use swagger's provided route editor:
+(Assuming we have our server already running)
+
+Run the following command in the terminal:
+
+`swagger project edit`
+
+__OR__
+
+##### To configure the swagger.yaml with our own text editor:
+
+The `swagger.yaml` path is `/PROJECT_DIRECTORY/api/swagger`
+
+---
+
+The only downside to using our own text editor is that we are not able to pick up small syntax and indentation errors that Swagger is particularly picky about. When using the swagger project editor, it will automatically write and save any changes into our own local `swagger.yaml` file.
+
+---
+
+Now that we've opened up the `swagger.yaml` file, we can see that Swagger has written a `/hello` path for us.
 
 ### #4: Write the function logic using Knex
+
 
 
 ### #5: Run the server and check to see if it is working
